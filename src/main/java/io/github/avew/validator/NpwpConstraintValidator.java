@@ -23,7 +23,7 @@ public class NpwpConstraintValidator implements ConstraintValidator<Npwp, String
             case 16:
                 return true;
             default:
-                return constraintValidatorMessage(MESSAGE, context);
+                return constraintValidatorMessage(context.getDefaultConstraintMessageTemplate(), context);
         }
 
     }

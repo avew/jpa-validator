@@ -2,6 +2,7 @@ package io.github.avew;
 
 import io.github.avew.domain.Person;
 import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +16,7 @@ import java.util.Set;
 /**
  * Unit test for simple App.
  */
-public class NpwpTest {
+public class OneOfIntegerTest {
 
     private Validator validator;
 
@@ -28,20 +29,22 @@ public class NpwpTest {
         validator = factory.getValidator();
     }
 
+
     @Test
-    public void testNpwpLength15() {
-        Person person = Person.builder().npwp("012345678901235").gender("L").build();
+    public void testOneOfIntegerSuccess() {
+        Person person = Person.builder().npwp("012345678901235").facilities(0).gender("L").build();
         Assert.assertEquals(15, person.getNpwp().length());
         Set<ConstraintViolation<Person>> validate = validator.validate(person);
         Assert.assertTrue(validate.isEmpty());
     }
 
     @Test
-    public void testNpwpFailed() {
-        Person person = Person.builder().npwp("01234567890123").build();
-        Assert.assertNotEquals(15, person.getNpwp().length());
+    public void testOneOIntegerfFailed() {
+        Person person = Person.builder().npwp("012345678901235").facilities(10).build();
+        Assert.assertEquals(15, person.getNpwp().length());
         Set<ConstraintViolation<Person>> validate = validator.validate(person);
         Assert.assertFalse(validate.isEmpty());
-
     }
+
+
 }
