@@ -32,6 +32,7 @@
         <lombok.version>1.18.24</lombok.version>
         <junit.version>4.13.1</junit.version>
         <hibernate.validator.version>6.2.5.Final</hibernate.validator.version>
+        <passay.version>1.6.2</passay.version>
     </properties>
 
     <dependencies>
@@ -39,6 +40,11 @@
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.passay</groupId>
+            <artifactId>passay</artifactId>
+            <version>${passay.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
