@@ -1,7 +1,6 @@
 package io.github.avew;
 
 import io.github.avew.domain.PersonEmail;
-import io.github.avew.domain.PersonPassword;
 import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,7 +1,6 @@
 package io.github.avew.domain;
 
 import io.github.avew.validator.EmailConstraintValidation;
-import io.github.avew.validator.PasswordConstraintValidation;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

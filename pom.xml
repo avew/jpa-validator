@@ -6,7 +6,7 @@
 
     <groupId>avew.github.io</groupId>
     <artifactId>jpa-validator</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.5</version>
     <packaging>jar</packaging>
     <description>validator jpa</description>
 
@@ -40,11 +40,7 @@
             <artifactId>hibernate-validator</artifactId>
             <version>${hibernate.validator.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.passay</groupId>
-            <artifactId>passay</artifactId>
-            <version>1.0</version>
-        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
