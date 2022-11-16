@@ -7,9 +7,6 @@ import javax.validation.ConstraintValidatorContext;
 import java.util.Arrays;
 
 public class PasswordConstraintValidator implements ConstraintValidator<PasswordConstraintValidation, String> {
-    @Override
-    public void initialize(PasswordConstraintValidation arg0) {
-    }
 
     @Override
     public boolean isValid(String password, ConstraintValidatorContext context) {
